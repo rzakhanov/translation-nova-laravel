@@ -3,7 +3,7 @@
 https://github.com/rzakhanov/translation-nova-laravel
 
 ### Requirements
-- PHP 7.23 || 8.0 or higher
+- PHP 7.3 || 8.0 or higher
 - Laravel 8 or higher
 - Nova 4 or higher
 
