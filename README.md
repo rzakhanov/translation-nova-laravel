@@ -1,6 +1,5 @@
 ### Translation & Languages for Nova 4
 
-##### * Toggle Switch Field for Nova 3 go to
 https://github.com/rzakhanov/translation-nova-laravel
 
 ### Requirements
