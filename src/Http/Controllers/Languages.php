@@ -47,7 +47,7 @@ class Languages extends Controller
 
             $data[$index] = $description;
 
-            $configContent = "<?php\n\treturn [\n\n\t'default_locale' => config('app.locale','az'),\n\n\t'lang_path' => env('SITE_LANG_PATH',lang_path()),\n\n\t'disabled_groups' => ['validation','auth','pagination','passwords'  ],\n\n\t'languages' =>";
+            $configContent = "<?php\n\treturn [\n\n\t'default_locale' => config('app.locale','az'),\n\n\t'lang_path' => env('SITE_LANG_PATH',lang_path().'/'),\n\n\t'disabled_groups' => ['validation','auth','pagination','passwords'  ],\n\n\t'languages' =>";
 
             $configContent .= Data::replaceToPureContent($data) . "\n\n\t];";
 
@@ -109,7 +109,7 @@ class Languages extends Controller
         unset($data[$old_index]);
         $data[$index] = $description;
 
-        $configContent = "<?php\n\treturn [\n\n\t'default_locale' => config('app.locale','az'),\n\n\t'lang_path' => env('SITE_LANG_PATH',lang_path()), \n\n\t'disabled_groups' => ['validation','auth','pagination','passwords'  ],\n\n\t'languages' =>";
+        $configContent = "<?php\n\treturn [\n\n\t'default_locale' => config('app.locale','az'),\n\n\t'lang_path' => env('SITE_LANG_PATH',lang_path().'/'), \n\n\t'disabled_groups' => ['validation','auth','pagination','passwords'  ],\n\n\t'languages' =>";
 
         $configContent .= Data::replaceToPureContent($data) . "\n\n\t];";
 

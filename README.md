@@ -90,6 +90,12 @@ The main logic is that we have 3 parts:
 **Translations** are keys inside of language files. For example  /lang/en/site.php contain 'register_key_98' => 'test content', . Here **register_key_98** is translation index
 
 
+**If You are using linux (docker) OS maybe you need to run chmod to access change local files**
+
+```linux
+chmod 0777 -R ./
+```
+
 
 ## Overview:
 <img src="screenshots/all.gif" width="1050"><br>
