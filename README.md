@@ -3,8 +3,9 @@
 https://github.com/rzakhanov/translation-nova-laravel
 
 ### Requirements
-- PHP 8.0 or higher
-- Nova 4
+- PHP 7.23 || 8.0 or higher
+- Laravel 8 or higher
+- Nova 4 or higher
 
 ## Installation
 
