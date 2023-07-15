@@ -12,7 +12,7 @@ https://github.com/rzakhanov/translation-nova-laravel
 You can install the package into a Laravel app that uses Nova via composer:
 
 ```bash
-composer rzakhanov/translation-nova-laravel
+composer rzakhanov/translation
 ```
 
 ## Usage
