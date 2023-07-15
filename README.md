@@ -22,12 +22,27 @@ You need to publish **config** and **helper** files first after installation
 php artisan vendor:publish --tag=rzakhanov-translation
 ```
 
+
+
 İt will publish two files
 
 1. [x] /config/rzakhanov-translation.php
 1. [x] /app/Helpers/langs_helper.php
 
 **Suggest that don't touch config file. Because it will change dynamically :)**
+
+**Add tool to tools() in NovaServiceProvider.php**
+```php
+    public function tools()
+    {
+        return [
+            //....
+            Rzakhanov\Translation\Translation::make()
+
+        ];
+    }
+```
+
 
 After it, we have to add menus to the sidebar Nova 4 in provider **NovaServiceProvider.php**
 
