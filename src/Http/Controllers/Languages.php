@@ -55,7 +55,7 @@ class Languages extends Controller
             fputs($fopen, $configContent);
             fclose($fopen);
 
-            File::copyDirectory(config('rzakhanov-translation.lang_path') . config('rzakhanov-translation.default_locale'), config('rzakhanov-translation.lang_path') . $index);
+            File::copyDirectory(config('rzakhanov-translation.lang_path') .'/'. config('rzakhanov-translation.default_locale'), config('rzakhanov-translation.lang_path') . $index);
 
         } else {
             return response()->json([
@@ -96,8 +96,8 @@ class Languages extends Controller
 
         if ($old_index!==$index && !isset($data[$index])) {
 
-            File::copyDirectory(config('rzakhanov-translation.lang_path') . $old_index, config('rzakhanov-translation.lang_path') . $old_index.'_old');
-            File::move(config('rzakhanov-translation.lang_path') . $old_index, config('rzakhanov-translation.lang_path') . $index );
+            File::copyDirectory(config('rzakhanov-translation.lang_path') .'/'. $old_index, config('rzakhanov-translation.lang_path') .'/'. $old_index.'_old');
+            File::move(config('rzakhanov-translation.lang_path') .'/'. $old_index, config('rzakhanov-translation.lang_path') .'/'. $index );
 
         }elseif($old_index!==$index && isset($data[$index])) {
             return response()->json([
@@ -151,7 +151,7 @@ class Languages extends Controller
         try {
 
             File::deleteDirectory(config('rzakhanov-translation.lang_path') . $index . '_old');
-            File::move(config('rzakhanov-translation.lang_path') . $index, config('rzakhanov-translation.lang_path') . $index . '_old');
+            File::move(config('rzakhanov-translation.lang_path') . '/'.$index, config('rzakhanov-translation.lang_path') .'/'. $index . '_old');
 
             return response()->json([
                 'response' => true,
@@ -164,6 +164,5 @@ class Languages extends Controller
                 'message' => 'Error !' . $exception,
             ], 422);
         }
-
     }
 }
